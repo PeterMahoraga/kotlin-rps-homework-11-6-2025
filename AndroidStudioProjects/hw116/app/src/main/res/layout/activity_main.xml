@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#f0f0f0">
+
+    <!-- 標題 (書本: 28sp bold) -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="猜拳遊戲"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333" />
+
+    <!-- 結果顯示 -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="選擇你的招式！"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp" />
+
+    <!-- 玩家 vs 電腦 (水平 LinearLayout, 書本用 80dp ImageView) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/ivPlayer"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_marginEnd="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VS"
+            android:textSize="20sp"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/ivComputer"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@android:drawable/ic_menu_camera"
+            android:layout_marginStart="20dp" />
+
+    </LinearLayout>
+
+    <!-- 選擇按鈕 (水平, 書本: 60dp Button) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/btnRock"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="石頭"
+            android:layout_marginEnd="10dp" />
+
+        <Button
+            android:id="@+id/btnPaper"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="布"
+            android:layout_marginEnd="10dp" />
+
+        <Button
+            android:id="@+id/btnScissors"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="剪刀" />
+
+    </LinearLayout>
+
+    <!-- 分數 (水平, 書本: 16sp) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/tvPlayerScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="玩家: 0"
+            android:textSize="16sp"
+            android:layout_marginEnd="20dp" />
+
+        <TextView
+            android:id="@+id/tvComputerScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="電腦: 0"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
